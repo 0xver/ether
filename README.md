@@ -2,7 +2,7 @@
 
 [![GitHub license](https://img.shields.io/badge/license-MIT-blue.svg)](https://github.com/0xver/ether/blob/master/LICENSE.md)
 
-Ether is a minimalistic CLI for Ethereum users to execute basic transactions and more. Encrypt a mnemonic onto an external drive then use it with a passphrase to securely derive keys and manage ETH.
+Ether is a minimalistic wallet CLI for basic Ethereum transactions and more. Encrypt a mnemonic onto an external drive then use it with a passphrase to securely derive keys and manage ETH.
 
 #
 
