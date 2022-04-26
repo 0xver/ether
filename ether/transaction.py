@@ -51,7 +51,7 @@ def send_transaction(data=None, testnet=False):
         ext_file_path = local.wallet_path()
         wallet.derivation(ext_file_path, "0")
     except:
-        print("Use command `wallet init location` to set wallet path.")
+        print("Use command `ether init location` to set wallet path.")
         seed_phrase = getpass("MNEMONIC: ")
         ext_file_path = None
     passphrase = getpass("PASSPHRASE: ")

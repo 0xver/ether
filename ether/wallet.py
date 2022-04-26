@@ -109,7 +109,7 @@ def account(private=False):
         derivation(ext_file_path, "0")
         mnemonic = False
     except:
-        print("Use command `wallet init location` to set wallet path.")
+        print("Use command `ether init location` to set wallet path.")
         seed_phrase = getpass("MNEMONIC: ")
         ext_file_path = None
         mnemonic = True
@@ -138,9 +138,9 @@ def balance(testnet=False):
             except:
                 status = False
                 if testnet == False:
-                    print("Use command `wallet init provider` to set provider.")
+                    print("Use command `ether init provider` to set provider.")
                 if testnet == True:
-                    print("Use command `wallet init provider --testnet` to set provider.")
+                    print("Use command `ether init provider --testnet` to set provider.")
         if testnet == True:
             account = local.account_file(testnet=True)
             try:
@@ -148,9 +148,9 @@ def balance(testnet=False):
             except:
                 status = False
                 if testnet == False:
-                    print("Use command `wallet init provider` to set provider.")
+                    print("Use command `ether init provider` to set provider.")
                 if testnet == True:
-                    print("Use command `wallet init provider --testnet` to set provider.")
+                    print("Use command `ether init provider --testnet` to set provider.")
         if status == True:
             provider_info = transaction.provider(provider_data)
             balance = transaction.get_balance(provider_info, account)
@@ -162,6 +162,6 @@ def balance(testnet=False):
                     pass
     except:
         if testnet == False:
-            print("Use command `wallet init account` to set watch only account.")
+            print("Use command `ether init account` to set watch only account.")
         if testnet == True:
-            print("Use command `wallet init account --testnet` to set watch only account.")
+            print("Use command `ether init account --testnet` to set watch only account.")
