@@ -1,3 +1,4 @@
+from ether import cli
 from setuptools import setup
 import pathlib
 
@@ -6,7 +7,7 @@ readme = (file_path/"README.md").read_text()
 
 setup(
   name="ether-cli",
-  version="0.1.2",
+  version=cli.version(),
   description="Minimalistic wallet CLI for Ethereum",
   long_description=readme,
   long_description_content_type="text/markdown",
@@ -18,7 +19,7 @@ setup(
     "console_scripts": ["ether=ether.cli:main"],
   },
   install_requires=[
-      "cryptography", "mnemonic", "hdwallet", "web3", "pathlib",
+      "cryptography", "mnemonic", "hdwallet", "web3", "pathlib", "requests",
   ],
   python_requires=">=3.9"
 )
