@@ -1,4 +1,3 @@
-from ether import cli
 from setuptools import setup
 import pathlib
 
@@ -7,7 +6,7 @@ readme = (file_path/"README.md").read_text()
 
 setup(
   name="ether-cli",
-  version=cli.version(),
+  version="0.1.3",
   description="Minimalistic wallet CLI for Ethereum",
   long_description=readme,
   long_description_content_type="text/markdown",
