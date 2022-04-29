@@ -2,15 +2,12 @@ from ether import wallet, transaction, local, utils
 from sys import argv
 from getpass import getpass
 
-def version():
-    return "0.1.3"
-
-msg_menu = f"""▄▄▄ .▄▄▄▄▄ ▄ .▄▄▄▄ .▄▄▄  
+msg_menu = """▄▄▄ .▄▄▄▄▄ ▄ .▄▄▄▄ .▄▄▄  
 ▀▄.▀·•██  ██▪▐█▀▄.▀·▀▄ █·
 ▐▀▀▪▄ ▐█.▪██▀▐█▐▀▀▪▄▐▀▀▄ 
 ▐█▄▄▌ ▐█▌·██▌▐▀▐█▄▄▌▐█•█▌
  ▀▀▀  ▀▀▀ ▀▀▀ · ▀▀▀ .▀  ▀
-v{version()}"""
+v0.1.3"""
 
 msg_commands = """ether account
 ether account --testnet
