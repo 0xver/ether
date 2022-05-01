@@ -6,7 +6,7 @@ readme = (file_path/"README.md").read_text()
 
 setup(
   name="ether-cli",
-  version="0.1.4",
+  version="0.1.5",
   description="Minimalistic wallet CLI for Ethereum",
   long_description=readme,
   long_description_content_type="text/markdown",
