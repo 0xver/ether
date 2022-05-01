@@ -35,6 +35,10 @@ Setup wallet
 ```
 ether init
 ```
+Watch only account
+```
+ether account
+```
 List all available commands
 ```
 ether commands
