@@ -7,7 +7,7 @@ msg_menu = """▄▄▄ .▄▄▄▄▄ ▄ .▄▄▄▄ .▄▄▄
 ▐▀▀▪▄ ▐█.▪██▀▐█▐▀▀▪▄▐▀▀▄ 
 ▐█▄▄▌ ▐█▌·██▌▐▀▐█▄▄▌▐█•█▌
  ▀▀▀  ▀▀▀ ▀▀▀ · ▀▀▀ .▀  ▀
-v0.1.6"""
+v0.1.7"""
 
 msg_commands = """ether account
 ether account --testnet
@@ -44,7 +44,7 @@ def main():
             if arg2 == "keys":
                 wallet.account(private=True)
             if arg2 == "mnemonic":
-                print(f"\n{wallet.mnemonic()}\n")
+                print(f"\n{wallet.seed_phrase()[1]}\n")
             if arg2 == "price":
                 ether = utils.eth_price(1)
                 print(f"${ether:.2f}")
