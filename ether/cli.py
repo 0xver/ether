@@ -1,13 +1,14 @@
 from ether import wallet, transaction, local, utils
 from sys import argv
 from getpass import getpass
+import pkg_resources
 
-msg_menu = """▄▄▄ .▄▄▄▄▄ ▄ .▄▄▄▄ .▄▄▄  
+msg_menu = f"""▄▄▄ .▄▄▄▄▄ ▄ .▄▄▄▄ .▄▄▄  
 ▀▄.▀·•██  ██▪▐█▀▄.▀·▀▄ █·
 ▐▀▀▪▄ ▐█.▪██▀▐█▐▀▀▪▄▐▀▀▄ 
 ▐█▄▄▌ ▐█▌·██▌▐▀▐█▄▄▌▐█•█▌
  ▀▀▀  ▀▀▀ ▀▀▀ · ▀▀▀ .▀  ▀
-v0.1.7"""
+v{pkg_resources.get_distribution("ether-cli").version}"""
 
 msg_commands = """ether account
 ether account --testnet
