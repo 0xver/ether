@@ -22,11 +22,11 @@ def create_file_pair(path, mnemonic):
     key_file(path)
     mnemonic_file(path, mnemonic)
     try:
-        with open(os.path.expanduser("~/.wallet/path.csv"), "w") as file:
+        with open(os.path.expanduser("~/.ether/path.csv"), "w") as file:
             file.write(path.strip())
     except:
-        os.mkdir(os.path.expanduser("~/.wallet"))
-        with open(os.path.expanduser("~/.wallet/path.csv"), "w") as file:
+        os.mkdir(os.path.expanduser("~/.ether"))
+        with open(os.path.expanduser("~/.ether/path.csv"), "w") as file:
             file.write(path.strip())
     print(f"\nSeed phrase and encryption key have been generated in the external drive\n\n{mnemonic}\n\nWrite backup mnemonic and store drive in secure location")
 
