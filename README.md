@@ -37,7 +37,7 @@ ether init
 ```
 Watch only account
 ```
-ether account
+ether address
 ```
 List all available commands
 ```
