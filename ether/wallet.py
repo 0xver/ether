@@ -162,6 +162,6 @@ def balance(testnet=False):
                     pass
     except:
         if testnet == False:
-            print("Use command `ether init account` to set watch only account.")
+            print("Use command `ether init address` to set watch only account.")
         if testnet == True:
-            print("Use command `ether init account --testnet` to set watch only account.")
+            print("Use command `ether init address --testnet` to set watch only account.")

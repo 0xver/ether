@@ -10,8 +10,8 @@ msg_menu = f"""▄▄▄ .▄▄▄▄▄ ▄ .▄▄▄▄ .▄▄▄
  ▀▀▀  ▀▀▀ ▀▀▀ · ▀▀▀ .▀  ▀
 v{pkg_resources.get_distribution("ether-cli").version}"""
 
-msg_commands = """ether account
-ether account --testnet
+msg_commands = """ether address
+ether address --testnet
 ether convert eth <amount>
 ether convert gwei <amount>
 ether convert wei <amount>
@@ -21,8 +21,8 @@ ether price <amount>
 ether gas <total>
 ether gas <total> <price>
 ether init
-ether init account
-ether init account --testnet
+ether init address
+ether init address --testnet
 ether init location
 ether init provider
 ether init provider --testnet
@@ -40,7 +40,7 @@ def main():
             if arg2 == "init":
                 ext_file_path = input("DRAG AND DROP EXTERNAL DRIVE: ")
                 wallet.try_path(path=ext_file_path.strip())
-            if arg2 == "account":
+            if arg2 == "address":
                 wallet.balance()
             if arg2 == "keys":
                 wallet.account(private=True)
@@ -56,7 +56,7 @@ def main():
         elif len(args) == 2:
             arg2 = argv[1]
             arg3 = argv[2]
-            if arg2 == "init" and arg3 == "account":
+            if arg2 == "init" and arg3 == "address":
                 local.init_account()
             elif arg2 == "init" and arg3 == "provider":
                 provider = getpass("PROVIDER: ")
@@ -66,7 +66,7 @@ def main():
                 ext_file_path = input("DRAG AND DROP EXTERNAL DRIVE: ")
                 local.wallet_path(path=ext_file_path)
                 print("Wallet location has been set.")
-            if arg2 == "account" and arg3 == "--testnet":
+            if arg2 == "address" and arg3 == "--testnet":
                 wallet.balance(testnet=True)
             if arg2 == "price":
                 ether = utils.eth_price(arg3)
@@ -85,7 +85,7 @@ def main():
                 chain_id = input("CHAIN ID: ")
                 local.provider_file(provider=provider, chain_id=chain_id, testnet=True)
                 print("Testnet provider has been set.")
-            elif arg2 == "init" and arg3 == "account" and arg4 == "--testnet":
+            elif arg2 == "init" and arg3 == "address" and arg4 == "--testnet":
                 local.init_account(testnet=True)
             if arg2 == "gas":
                 estimate = utils.eth_estimate(arg3, arg4)
